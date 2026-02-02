@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4hewnxmsfchn"]
+
+[ext_resource type="Script" uid="uid://c8cakag274t8k" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://cj452vl2cii41" path="res://Tiny RPG Character Asset Pack v1.03 -Free Soldier&Orc/Characters(100x100)/Soldier/Soldier/Soldier-Idle.png" id="1_v0iea"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
+radius = 6.0
+height = 16.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_cvnsp")
+
+[node name="Animation" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Animation"]
+texture = ExtResource("1_v0iea")
+region_enabled = true
+region_rect = Rect2(41, 39, 15, 18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 1)
+shape = SubResource("CapsuleShape2D_cvnsp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(8, 8)
