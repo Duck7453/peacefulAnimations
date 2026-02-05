@@ -15,6 +15,11 @@ run/main_scene="uid://ocljuckmi5md"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=925
+window/size/viewport_height=265
+
 [layer_names]
 
 2d_physics/layer_1="one"
