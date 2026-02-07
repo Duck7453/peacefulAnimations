@@ -14,6 +14,7 @@ func _process(_delta):
 		animation.play("walk")
 	else:
 		animation.play("idle")
+	
 		
 	
 	
